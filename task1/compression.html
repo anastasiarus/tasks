@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function compress(uncompressStr) {
+            let arr = uncompressStr.split('');
+            let result = {};
+            let compressed = '';
+            arr.forEach(function (letter) {
+                if (letter in result) {
+                    result[letter]++;
+                }
+                else {
+                    result[letter] = 1;
+                }
+            });
+            for (letter in result) {
+                compressed += letter + result[letter];
+            }
+            console.log(compressed);
+        }
+        compress('a');
+        compress('aaa');
+        compress('aabbb');
+        compress('aaabcc');
+
+        function uncompress(compressStr) {
+            let result = '';
+            for (let i = 0; i < compressStr.length; i += 2) {
+                result += compressStr[i].repeat(+compressStr[i + 1]);
+            }
+            console.log(result);
+        }
+        uncompress('a1');
+        uncompress('a5');
+        uncompress('a2b3');
+        uncompress('a2b1c3');
+    </script>
+</body>
+
+</html>

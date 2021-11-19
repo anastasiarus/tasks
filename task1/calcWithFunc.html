@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let zero= (arg)=>{
+            if (!arg) return function () { return 0 };
+                return arg(0);
+        }
+        let one= (arg)=>{
+            if (!arg) return function () { return 1 };
+                return arg(1);
+        }
+        let two= (arg)=>{
+            if (!arg) return function () { return 2 };
+                return arg(2);
+        }
+        let three= (arg)=>{
+            if (!arg) return function () { return 3 };
+                return arg(3);
+        }
+        let four= (arg)=>{
+            if (!arg) return function () { return 4 };
+                return arg(4);
+        }
+        
+        let five= (arg)=>{
+            if (!arg) return function () { return 5 };
+                return arg(5);
+        }
+
+        let six= (arg)=>{
+            if (!arg) return function () { return 6 };
+                return arg(6);
+        }
+
+        let seven= (arg)=>{
+            if (!arg) return function () { return 7 };
+                return arg(7);
+        }
+        let eight= (arg)=>{
+            if (!arg) return function () { return 8 };
+                return arg(8);
+        }
+        let nine= (arg)=>{
+            if (!arg) return function () { return 9 };
+                return arg(9);
+        }
+
+            let plus = (a) => {
+                return function (b) { return a() + b };
+            }
+            let minus = (a) => {
+                return function (b) { return a() - b };
+            }
+            let times = (a) => {
+                return function (b) { return a() * b };
+            }
+            let dividedBy = (a) => {
+                return function (b) { return a() / b };
+            }
+
+            console.log('Результат: ' +seven(times(five())))
+            console.log('Результат: ' +four(plus(nine())))
+            console.log('Результат: ' +eight(minus(three())))
+            console.log('Результат: ' +six(dividedBy(two())))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countVowelLetters(str) {
+            let vowel= ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
+            let count=0
+            let arr = str.toLowerCase().split('')
+            arr.reduce((index,letter)=>{
+                vowel.forEach((vowel)=>{
+                if (vowel===letter) {
+                count+=1
+            }})})
+            return count 
+        }
+        
+             /* vowel.forEach((item)=>{
+                if (str.toLowerCase().includes(item)) {
+                count++
+            }})
+            return count}  */
+        
+        console.log('Количество гласных = '+countVowelLetters ('Пришла зима, запахло…'))
+        console.log('Количество гласных = '+countVowelLetters ('Ghbdtn, z r dfv bp Hjccbb'))
+        console.log('Количество гласных = '+countVowelLetters ('длинношеее'))
+    </script>
+</body>
+</html>
