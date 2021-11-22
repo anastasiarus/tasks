@@ -10,7 +10,7 @@
 
 <body>
     <script>
-        let a
+        /* let a
         function fizzBuzz(a) {
             let result = []
             for (a = 1; a <= 100; a++) {
@@ -29,7 +29,37 @@
             }
             return result
         }
-        alert(fizzBuzz(a))
+        alert(fizzBuzz(a)) */
+
+
+        let i
+        function fizzBuzz(i) {
+            const result = []
+                for (i = 1; i <= 100; i++) {
+
+                    switch (true) {
+
+                        case i % 3 === 0 && i % 5 == 0:
+                        result.push('FizzBuzz')
+                            break;
+
+                        case i % 3 === 0:
+                        result.push('Fizz')
+                            break;
+
+                        case i % 5 === 0:
+                        result.push('Buzz')
+                            break;
+
+                        default:
+                        result.push(i)
+                            break;
+                    }
+                }
+                return result 
+            }
+
+            alert(fizzBuzz(i))
     </script>
 </body>
 

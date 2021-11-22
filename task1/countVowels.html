@@ -8,10 +8,11 @@
 </head>
 <body>
     <script>
+
         function countVowelLetters(str) {
-            let vowel= ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
+            const vowel= ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
             let count=0
-            let arr = str.toLowerCase().split('')
+            const arr = str.toLowerCase().split('')
             arr.reduce((index,letter)=>{
                 vowel.forEach((vowel)=>{
                 if (vowel===letter) {

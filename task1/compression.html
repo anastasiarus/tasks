@@ -11,9 +11,9 @@
 <body>
     <script>
         function compress(uncompressStr) {
-            let arr = uncompressStr.split('');
-            let result = {};
-            let compressed = '';
+            const arr = uncompressStr.split('');
+            const result = {};
+            const compressed = '';
             arr.forEach(function (letter) {
                 if (letter in result) {
                     result[letter]++;
@@ -33,7 +33,7 @@
         compress('aaabcc');
 
         function uncompress(compressStr) {
-            let result = '';
+            const result = '';
             for (let i = 0; i < compressStr.length; i += 2) {
                 result += compressStr[i].repeat(+compressStr[i + 1]);
             }

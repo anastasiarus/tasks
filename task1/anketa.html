@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const
+            lastName = prompt('Фамилия'),  
+            firstName = prompt('Имя'),
+            patronomic = prompt('Отчество')
+            if (lastName, firstName, patronomic == undefined || lastName, firstName, patronomic == "") {
+                    alert('Введите данные!')
+                }
+            age = prompt('Возраст')
+            if (age.replace(/\s/g, '').length === 0 || isNaN(age)) {
+                    alert('Введите число!')
+            } 
+            gender = confirm('Если Вы мужчина, нажмите ОК')
+
+        alert(`Ваше ФИО: ` + lastName + ' ' + firstName + ' ' + patronomic + '\n'+
+            `Ваш возраст в годах: ` + age + '\n' +
+            `Ваш возраст в днях: ` + (age * 365) + '\n' +
+            (age >= 18 === true ? 'Вы совершеннолетний' : 'Вы несовершеннолетний') + '\n' +
+            `Ваш пол: ` + (gender ? 'мужской' : 'женский') + '\n' +
+            `Вы на пенсии: ` + (age >= 60 === true ? 'да' : 'нет')
+        )
+
+    </script>
+</body>
+
+</html>

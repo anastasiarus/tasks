@@ -23,7 +23,7 @@
             return y ? x * pow(x, y - 1) : 1
         }
 
-        let curriedPow = curryPow(pow);
+        const curriedPow = curryPow(pow);
 
         function calcPlus(a) {
             return (b) => {

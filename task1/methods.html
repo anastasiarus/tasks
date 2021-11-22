@@ -13,7 +13,7 @@
 
         /* //ЗАДАЧА1
         numbers = [2, 3, 5, 7, 11, 13, 17, 19]
-        let result = []
+        const result = []
         numbers.reduce(function currentSums(sum, item) {
             result.push(sum)
             return sum + item;
@@ -21,25 +21,25 @@
         alert(result); */
 
         /*  //ЗАДАЧА2
-        var str = "Каждый охотник желает знать, где сидит фазан."
-        var arr = str.split(' ')
+        const str = "Каждый охотник желает знать, где сидит фазан."
+        const arr = str.split(' ')
         console.log(arr)
         function firstLetter (value, index, arr) {
-            if (index == 0)
+            if (index === 0)
                 return true;
             else
                 return arr[index - 1] === ' '
         }
-        let newArray = arr.filter.call(str, firstLetter)
+        const newArray = arr.filter.call(str, firstLetter)
         console.log(newArray) */
 
 
         //ЗАДАЧА3
 
-        /* let arr = [1, 2, 4, 6, 5]
+        /*  const arr = [1, 2, 4, 6, 5]
             console.log('Старый массив: ' + arr)
-            let newArray = arr.map(function changeArray(arr) {
-                let middle = arr.length / 2
+            const newArray = arr.map(function changeArray(arr) {
+                const middle = arr.length / 2
                 if (length % 2)
                     k = middle + 1
                 else k = middle
