@@ -16,11 +16,11 @@
         const result = []
         numbers.reduce(function currentSums(sum, item) {
             result.push(sum)
-            return sum + item;
+            return sum + item
         });
-        alert(result); */
+        alert(result)
 
-        /*  //ЗАДАЧА2
+         //ЗАДАЧА2
         const str = "Каждый охотник желает знать, где сидит фазан."
         const arr = str.split(' ')
         console.log(arr)
@@ -36,21 +36,35 @@
 
         //ЗАДАЧА3
 
-        /*  const arr = [1, 2, 4, 6, 5]
-            console.log('Старый массив: ' + arr)
-            const newArray = arr.map(function changeArray(arr) {
-                const middle = arr.length / 2
-                if (length % 2)
-                    k = middle + 1
-                else k = middle
-                for (let i = 0; i < middle; i++) {
-                    let tmp = arr[i]
-                    arr[i] = arr[k + i]
-                    arr[k + i] = tmp
+        function changeArray(arr) {
+
+                let newArray = []
+                let firstPart = []
+                let secondPart = []
+                let middle
+
+                if (arr.length % 2) {
+
+                    firstPart = arr.slice(0, arr.length / 2)
+                    secondPart = arr.slice(arr.length / 2)
+                    newArray = secondPart.concat(firstPart)
+
                 }
-              return arr
-            })
-            console.log('Новый массив: ' + newArray) */
+                
+                else {
+
+                    middle = arr[Math.ceil(arr.length / 2) - 1]
+                    firstPart = arr.slice(0, middle - 1)
+                    secondPart = arr.slice(1, middle)
+                    newArray = secondPart.concat(middle).concat(firstPart)
+                }
+
+                return newArray
+            }
+
+            console.log(changeArray([1, 2, 3, 4, 5]))
+            console.log(changeArray([1, 2]))
+            console.log(changeArray([1, 2, 3, 4, 5, 6, 7, 8]))
 
     </script>
 </body>
