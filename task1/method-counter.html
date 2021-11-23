@@ -14,22 +14,31 @@
         function GetCounter(x) {
 
             this.counter = x
-            this.log = () => console.log(this.counter)
-            this.count = (num) => (this.counter += num)
-            this.reset = () => this.counter = 0
+            this.log = function() {
+                console.log(this.counter)
+                return this
+            }
+            this.count = function(num){
+                this.counter += num
+                return this
+            }
+            this.reset = function() {
+                this.counter = 0
+                return this
+            }
         }
 
         const counter = new GetCounter(5)
 
         counter.log() // 5
-        counter.count(4)
-        counter.log() // 9
-        counter.count(3)
-        counter.log() // 12
-        counter.reset()
-        counter.log() // 0
-        counter.count(8)
-        counter.log();
+        .count(4)
+        .log() // 9
+        .count(3)
+        .log() // 12
+        .reset()
+        .log() // 0
+        .count(8)
+        .log();
 
 
     </script>
