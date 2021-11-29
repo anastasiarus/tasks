@@ -1,4 +1,4 @@
-import { DateSetting } from "./DateSetting"
+import { DateSetting } from "./DateSetting.js"
 
 class Calendar {
    days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб','Вс' ]
